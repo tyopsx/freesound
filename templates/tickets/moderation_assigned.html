@@ -23,6 +23,8 @@
             $("#moderation-ticket-messages-" + i).load(messages_url+'messages/');
             $("#moderation-ticket-link-" + i).get(0).innerHTML =
                     '<p><a href="'+messages_url+'" target="_blank">open full ticket...</a><p>';
+            //Raising the N value should solve the problem of not showing (on the right side) all the sounds after they were selected
+            //If N (limit) is no longer needed, you can even comment or remove this section
             var N = 5;
             if (i == N - 1){
                 var n_remaining = ticket_ids.length - N;
